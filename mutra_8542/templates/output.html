@@ -1,0 +1,22 @@
+<!doctype html>
+<title>Scatter</title>
+<h1>Scatter</h1>
+<table>
+<label>Number of points in each cluster</label>
+<tr>
+<td><strong>{{dict_index}}</strong></td>
+ </tr>
+</table>
+<table>
+<label>Coordinates of of centroids for each cluster</label>
+
+		{% for c in centroids_list %}
+<tr>
+			
+				<td>{{c}}</td>
+                
+</tr>
+			{%endfor%}
+     </table>      
+<img src="{{url_for('static', filename='image.jpg')}}">
+<img src="{{url_for('static', filename='image_bar.jpg')}}">
